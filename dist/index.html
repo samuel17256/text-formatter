@@ -32,9 +32,10 @@
       </div>
       <h2 class="mt-4 text-xl font-semibold text-white">Text Formatter</h2>
       <div>
-        <ul id="result">
-
-        </ul>
+        <ul id="result" ></ul>
+        <p class="font-bold" id="bold"></p>
+        <p class="uppercase" id="upper"></p>
+        <p class="bg-red-700" id="red"></p>
       </div>
     </div>
 
@@ -45,16 +46,20 @@
         e.preventDefault();
         let input = document.getElementById("text-format");
 
-        if (input.value == "") {
-          alert`Input a text`;
-        } else {
-          let li = document.createElement("li");
-          li.innerHTML = `<p class="font-extrabold text-xl text-white ">${input.value}</p>
-          <p class="uppercase text-xl text-white ">${input.value}</p>
-          <p class="bg-red-700 text-xl text-white mx-96 text-center">${input.value}</p>`;
-          document.getElementById("result").appendChild(li);
-          document.querySelector("input[type=text]").value='';
-        }
+        document.getElementById("bold").textContent=`${input.value}`
+        document.getElementById("upper").textContent=`${input.value}`
+        document.getElementById("red").textContent=`${input.value}`
+        
+        // if (input.value == "") {
+        //   alert`Input a text`;
+        // } else {
+        //   let li = document.createElement("li");
+        //   li.innerHTML = `<p class="font-extrabold text-xl text-white ">${input.value}</p>
+        //   <p class="uppercase text-xl text-white ">${input.value}</p>
+        //   <p class="bg-red-700 text-xl text-white mx-96 text-center">${input.value}</p>`;
+        //   document.getElementById("result").appendChild(li);
+        //   document.querySelector("input[type=text]").value = "";
+        // }
       });
     </script>
   </body>
